@@ -10,9 +10,21 @@ class PersegiPanjang:
         return 2 * self.panjang + self.lebar
 
     def __str__(self):
-        return f, {self.panjang}, {self.lebar} 
+        return f"Persegi Panjang, panjang {self.panjang} cm, dan lebar {self.lebar} cm" 
+
+input_panjang = int(input("Masukkan Panjang: "))
+if input_panjang <= 0:
+    print("Panjang harus lebih dari 0")
+    exit()
+
+input_lebar = int(input("Masukkan Lebar: "))
+if input_lebar <= 0:
+    print("Lebar harus lebih dari 0")
+    exit()
+
 
 persegi_panjang = PersegiPanjang(3,2)
+
 print (persegi_panjang)
-print (persegi_panjang.keliling(),)
-print (persegi_panjang.luas())
+print ("keliling:",persegi_panjang.keliling(), "cm")
+print ("luas:",persegi_panjang.luas(), "cm")
